@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: Lexend;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+a { color: lightblue; }
+a:hover { color: rgb(130, 206, 231); }
+h1 { font-size: 22px; }
+
+.input-container {
+    background-color: rgb(60, 60, 60);
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    max-width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.input-container input:focus { outline: 2px solid orange; }
+.input-container>div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.input-container input[type=text] {
+    border: none;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.input-container select:focus { outline: none; }
+.input-container select:hover { cursor: pointer; }
+.input-container select {
+    background-color: rgb(40, 40, 40);
+    border: none;
+    color: white;
+    font-size: 18px;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.input-container button {
+    border: none;
+    width: 120px;
+    align-self: end;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: rgb(40, 40, 40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    user-select: none;
+}
+
+.input-button { position: relative; }
+.input-button p { position: absolute; top: 3px; }
+#message { display: none; }
+
+.input-container button:hover { cursor: pointer; background-color: rgb(80, 80, 80); }
+#save, #saveEdit { color: rgb(133, 216, 133); }
+#clear, #cancel { color:rgb(243, 194, 61); }
+
+.success { color: rgb(133, 216, 133); }
+.failure { color: rgb(252, 124, 124); }
+
+#output {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.course-container {
+    background-color: rgb(60, 60, 60);
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    position: relative;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.course-container .edit {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.course-container .edit:hover { cursor: pointer; background-color: rgb(80, 80, 80); }
+
+#edit-container {
+    position: absolute;
+    margin-top: 100px;
+    border: 2px solid rgb(243, 194, 61);
+    width: 350px;
+    z-index: 10;
+    display: none;
+}
+
+#saveEdit { align-self: end; }
